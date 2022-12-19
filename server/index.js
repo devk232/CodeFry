@@ -45,11 +45,6 @@ io.on('connection', (socket)=>{
 })
 
 
-// http.listen(port, ()=>{
-//   console.log("Started");
-// })
-
-
 
 // Router
 app.use("/users", user);
