@@ -5,9 +5,7 @@ const app = express();
 const user = require("./routes/user");
 const bodyParser = require('body-parser');
 const todos = require('./routes/todos');
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
-
+const code = require('./routes/code');
 require('dotenv').config({
   path: './config/config.env'
 })
@@ -49,7 +47,7 @@ io.on('connection', (socket)=>{
 // Router
 app.use("/users", user);
 app.use('/todos', todos);
-
+app.use('/code', code);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
