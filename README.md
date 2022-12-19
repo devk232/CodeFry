@@ -1,53 +1,79 @@
-# CodeFry
-Codefry is a MernStack Web Application, based upon the user’s Codeforces profile handles, helps programmers to code together and eases their tasks in the online schedule.
+
+# CODEFRY - A Programming Community Application
+
+<p align="left"><img src="screenshots/Code FRY-logo.png" width = 30% height=30%></p><br>
+
+
+## Inspiration:
+Considering the present condition due to Covid-19, distant and remote learning has been of everyone's life. We wanted to give it a try from our end to address the issues faced by programmers in a simpler way.
+
+Using the most powerful weapon with humanity - technology, we decided to solve the issue by introducing Codefry Application. It is a MernStack Web Application, based upon the user’s Codeforces profile handles, helps programmers to code together and eases their tasks in the online schedule.
+
+ 
+
+## Technology Stack:
+- **Frontend** - React <br>
+- **Backend** - Express.js, Node.js <br>
+- **Database** - MongoDB <br>
+- **Other tools & technologies** - Web APIs, Socket.IO <br>
+
 
 ## Setup (APIs used)
 Following APIs are required to run this web app:
 
 - [Codeforces Problem Set API](https://codeforces.com/api/problemset.problems?tags=implementation)
 - [Codeforces User Status API](https://codeforces.com/api/user.status?handle=Fefer_Ivan&from=1&count=10)
-- [Rapid Judge API](https://judge0-ce.p.rapidapi.com/submissions)
 
 ## Instructions
-
 #### Environment Variables
 - Place the API keys in `.env` with your own
 
-## How to run?
-Install dependencies
-- Inside both codefry and server directories
-```` 
-npm install
-```` 
-Run local Database server
-```` 
-mongod
-```` 
-Inside server
-```` 
-node index.js
-````
-Inside codefry
-```` 
-npm start
-````
+### Install dependencies
+<details>
+  <summary><strong>To setup backend and run server locally:</strong></summary>
 
-## Features
-- Codefry helps users to improve their coding skills by practising Codeforces problems by their tags. 
-- The user can also look at their solved problems by logging into their account.
-- A personalised Todo list is available for the users to note down the deadlines of the coding contests and their favourite problems.
-- Users can create personalised room with other coders, run & debug codes and have video and audio calling feature.
-- A code editor is also present for the user to run the code in four languages - C, C++, Python and Java.
+- `cd server` - to switch to codefry backend
+- `npm install` - to install all the backend packages
+- `node index.js` - to run the server
+</details>
 
-## Technologies used
-- Frontend- HTML, CSS, Bootstarp, Flexbox, Javascript
-- Backend- ejs, Express.js, Node.js
-- Frameworks- React
-- Database- MongoDB, Atlas
-- Socket.io
-- Peer.js Library and WebRTC
 
-## Snapshots
+<details>
+  <summary><strong>To setup frontend and run server locally:</strong></summary>
+	
+- `cd codefry` - to switch to codefry frontend
+- `npm install` - to install all the frontend packages
+- `npm start` - to start the client
+</details>
+
+
+<details>
+  <summary><strong>To run the Video Meet and Drawing board:</strong></summary>
+	
+- `cd CodeFry-Video-Meet` - to switch to codefry Video-meet & drawing Board
+- `npm install` - to install all the socket.io, WebRTC packages
+</details>
+
+
+<details>
+  <summary><strong>To run the local database:</strong></summary> 
+	
+- `mongod` - to run local database 
+</details>
+
+
+## Features:
+  #### Main Features
+  - [x] **Programming skills** - Codefry helps users to improve their coding skills by practising Codeforces problems by their tags. <br>
+  - [x] **Tags based problems** - Users can also look at all the Codeforces problems on the basis of problem tags (ex-array, dp, greedy, etc.) <br>
+  - [x] **Login and Signup Authentication** - Every user has to create his/her account to access personalised features. <br>
+  - [x] **Codeforces solved problems** - The user can also look at their solved problems by logging into their account & putting the Codeforces handle.<br>
+  - [x] **Coding rooms** - Users can create personalised coding room with other coders.<br>
+  - [x] **Code Editor** - A code editor is also present for the user to run the code in four languages - C, C++, Python and Java.<br>
+
+
+## ScreenShots:
+
 - ### Problems by their tags:
 <p align="center"><img src="screenshots/problems.png" width = 80%></p><br>
 
@@ -71,12 +97,3 @@ npm start
 
 - ### Code Editor:
 <p align="center"><img src="screenshots/CodeEditor.png" width = 80%></p><br>
-
-## Future aspects
-- Displaying graphs to user to show the progress and notify user about upcoming contests.
-- Adding collaborative live code editor
-- Adding other programming languages in the code editor
-- AI and advanced mathematics enabled user's progress detection and suggesting learning paths.
-- Gamification of the Application and planned learning roadmap for the users.
-
-## Hope you like it ❤️

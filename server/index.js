@@ -33,6 +33,22 @@ app.use(cors());
 
 const port = process.env.PORT || 4000;
 
+// Drawing board part
+io.on('connection', (socket)=>{
+  console.log("User Online");
+
+  socket.on('canvas-data', (data)=>{
+    socket.broadcast.emit('canvas-data', data);
+  })
+})
+
+
+// http.listen(port, ()=>{
+//   console.log("Started");
+// })
+
+
+
 // Router
 app.use("/users", user);
 app.use('/todos', todos);

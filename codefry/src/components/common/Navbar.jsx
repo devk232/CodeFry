@@ -70,7 +70,7 @@ class Navbar extends Component {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white no-decoration" target="_blank" href="https://codefry-meet.herokuapp.com/">
+              <a className="nav-link text-white no-decoration" target="_blank" href=" https://codefrymeet.herokuapp.com/">
                 <span className="navbar-item">Meet</span>{" "}
               </a>
             </li>
@@ -133,15 +133,15 @@ class Navbar extends Component {
                       class="dropdown-item todo-dropdown-items"
                       href="/todos/create"
                     >
-                      Create Todo
+                      My Todos
                     </a>
-                    <a
+                    {/* <a
                       style={{ textDecoration: "none" }}
                       class="dropdown-item todo-dropdown-items"
                       href="/todos"
                     >
                       My Todos
-                    </a>
+                    </a> */}
                     <div class="dropdown-divider"></div>
                     <a
                       style={{ textDecoration: "none" }}
